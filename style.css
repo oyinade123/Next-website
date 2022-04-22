@@ -1,0 +1,363 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+header {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+}
+
+header h1 a {
+  color: #f77062;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  color: #f77062;
+  transition: 0.3s ease;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  background-color: #f77062;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  background-color: #4837ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger {
+  position: absolute;
+  top: 2.1rem;
+  right: 2rem;
+  display: none;
+  background-color: #ffffff;
+}
+.hamburger img {
+  width: 30px;
+}
+
+/* HERO SECTION CSS */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  max-width: 1200px;
+  margin-top: 3rem;
+}
+
+.content h1 {
+  background-color: #f77062;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.content h2 {
+  background-color: #f77062;
+  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.content p {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.btn-content {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+
+.content-image img {
+  width: 100%;
+}
+
+/* SERVICES SECTION CSS */
+
+.services {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services h1 {
+  background-color: #ff8177;
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c74 21%,
+    #f99185 52% #cf556c 78%,
+    #b12a5b 100%
+  );
+  background-size: 100%;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.services-card {
+  margin: 1rem;
+  height: 525px;
+  width: 480px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0) 100%
+    ),
+    url(/images/pexels-harsch-shivam-2007647.jpg);
+  background-size: cover;
+  position: relative;
+  color: #ffffff;
+}
+
+.services-card:nth-child(2) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0) 100%
+    ),
+    url(/images/pexels-cottonbro-4009626.jpg);
+  background-size: cover;
+  position: relative;
+  color: #ffffff;
+}
+
+.services-card h2 {
+  position: absolute;
+  top: 350px;
+  left: 30px;
+}
+
+.services-card p {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+}
+
+.services-card button {
+  color: #ffffff;
+  position: absolute;
+  top: 440px;
+  left: 30px;
+  cursor: pointer;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+}
+
+.services-card:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+footer .link-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+footer .link-items a {
+  margin-top: 0.3rem;
+}
+
+.footer-2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 5rem 0rem 5rem;
+}
+
+.footer-2 img {
+  background-color: #ffff;
+  width: 1.5rem;
+  clip-path: circle();
+  margin: 0 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+  }
+
+  li {
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .open {
+    height: 200px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .content h1,
+  h2 {
+    text-align: center;
+  }
+
+  .content p {
+    text-align: center;
+  }
+
+  .btn-content {
+    margin-bottom: 2rem;
+    padding: 0.7rem 7rem;
+  }
+
+  .content-image img {
+    text-align: center;
+  }
+
+  .services h1 {
+    font-size: 2rem;
+  }
+
+  .services-card {
+    width: 400px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+
+  .footer-wrapper {
+    flex: 0 1 12.5rem;
+  }
+
+  .footer-wrapper h2 {
+    text-align: start;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    .btn-content {
+      margin-bottom: 2rem;
+      padding: 0.6rem 6rem;
+      font-size: 0.7rem;
+    }
+
+    .services-card {
+      width: 300px;
+    }
+
+    .services h1 {
+      font-size: 1.2rem;
+    }
+
+    .services-card p {
+      position: absolute;
+      top: 380px;
+      left: 30px;
+    }
+
+    .footer-2 {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-2 img {
+      width: 15px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .footer-2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-2 h1 {
+    font-size: 1.5rem;
+  }
+
+  .footer-2 img {
+    display: inline-block;
+    margin: 0 0.2rem;
+  }
+}
